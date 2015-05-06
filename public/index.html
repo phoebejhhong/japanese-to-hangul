@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <title>일본어를 한글로 :: 독음 생성기 Japanese to Hangul</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>일본어를 한글로</h1>
+    </header>
+
+    <section id="main">
+      <form id="convert-form">
+        <textarea rows="8" cols="40"></textarea>
+        <input type="submit" value="변환하기" >
+      </form>
+        <textarea id="hangul-output" rows="8" cols="40">
+        </textarea>
+    </section>
+
+    <script charset="utf-8">
+    $("#convert-form").on("submit", function (event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/convert',
+        method: 'POST',
+        data: {"japanese-input": $("textarea").val()},
+        success: function (result) {
+          $("#hangul-output").html(result);
+        }
+      })
+    });
+    </script>
+
+  </body>
+</html>
