@@ -1,6 +1,5 @@
 require 'sinatra'
 require './app/app'
-require 'byebug'
 
 get "/" do
   send_file "public/index.html"

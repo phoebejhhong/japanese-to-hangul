@@ -1,6 +1,5 @@
 require_relative './kana_hangul_map'
 require 'kakasi'
-require 'byebug'
 
 class KanaHangulApp
   attr_accessor :mapper
