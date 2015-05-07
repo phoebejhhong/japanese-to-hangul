@@ -131,7 +131,7 @@ class KanaHangulMap
     キョン ション ニョン ミョン リョン ギョン ジョン ビョン ピョン"
     .split(" ").delete_if {|el| el[/\s/]}
 
-  KATAKANA_YOON =
+  KATAKANA_YOON_SOKUON =
     "キャッ シャッ ニャッ ミャッ リャッ ギャッ ジャッ ビャッ ピャッ
     キュッ シュッ ニュッ ミュッ リュッ ギュッ ジュッ ビュッ ピュッ
     キョッ ショッ ニョッ ミョッ リョッ ギョッ ジョッ ビョッ ピョッ"
@@ -196,12 +196,12 @@ class KanaHangulMap
   HANGUL_YOON_N =
     "캰샨냔먄랸갼쟌뱐퍈
     큔슌뉸뮨륜균쥰뷴퓬
-    쿈숀뇬묜룐굔죤뵨푠"
+    쿈숀뇬묜룐굔죤뵨푠".split("").delete_if {|el| el[/\s/]}
 
   HANGUL_YOON_SOKUON =
     "캿샷냣먓럇걋쟛뱐퍗
     큣슛늇뮷귯쥿븃퓻
-    쿗숏뇻묫룟굣죳뵷푯"
+    쿗숏뇻묫룟굣죳뵷푯".split("").delete_if {|el| el[/\s/]}
 
   KANA_HANGUL_MAP = Hash.new
 
@@ -238,6 +238,20 @@ class KanaHangulMap
       KANA_HANGUL_MAP[katakana] = HANGUL_SOKUON[idx]
     end
 
+    HIRAGANA_YOON_N.each_with_index do |hiragana, idx|
+      KANA_HANGUL_MAP[hiragana] = HANGUL_YOON_N[idx]
+    end
+    KATAKANA_YOON_N.each_with_index do |katakana, idx|
+      KANA_HANGUL_MAP[katakana] = HANGUL_YOON_N[idx]
+    end
+
+    HIRAGANA_YOON_SOKUON.each_with_index do |hiragana, idx|
+      KANA_HANGUL_MAP[hiragana] = HANGUL_YOON_SOKUON[idx]
+    end
+    KATAKANA_YOON_SOKUON.each_with_index do |katakana, idx|
+      KANA_HANGUL_MAP[katakana] = HANGUL_YOON_SOKUON[idx]
+    end
+
   end
 
   def is_base?(char)
@@ -245,7 +259,7 @@ class KanaHangulMap
   end
 
   def convert(string)
-    KANA_HANGUL_MAP[string] || "?"
+    KANA_HANGUL_MAP[string] || string
   end
 
 end
