@@ -12,13 +12,43 @@ h1 {
   text-align: center;
   padding: 10px;
   color: #FFFFFF;
-  font-family: "Apple SD Gothic Neo", "맑은 고딕"
+  font-family: "Apple SD Gothic Neo", "맑은 고딕";
 }
 
 #main {
   width: 80%;
   margin: auto;
   background-color: #F8F8F8;
+}
+
+#main header {
+  width: 100%;
+  height: 2em;
+  display: block;
+  position: relative;
+  padding-top: 1%;
+}
+
+h3 {
+  position: absolute;
+  display: inline-block;
+  font-family: "Apple SD Gothic Neo", "맑은 고딕";
+}
+
+h3#japanese {
+  left: 2%;
+}
+
+h3#hangul {
+  left: 60%;
+}
+
+button {
+  width: 10%;
+  font-size: 1.6em;
+  padding: 1%;
+  position: absolute;
+  left: 45%;
 }
 
 form {
@@ -33,12 +63,4 @@ textarea {
 
 textarea#hangul-output {
   float: right;
-}
-
-input[type=submit] {
-  width: 10%;
-  font-size: 24px;
-  padding: 1%;
-  position: absolute;
-  top: 50%;
 }

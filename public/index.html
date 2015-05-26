@@ -13,16 +13,20 @@
     </header>
 
     <section id="main">
+      <header>
+        <h3 id="japanese">일본어</h3>
+        <button id="submit-btn">→</button>
+        <h3 id="hangul">한글</h3>
+      </header>
       <form id="convert-form">
         <textarea rows="20" cols="40"></textarea>
-        <input type="submit" value="변환하기" >
       </form>
         <textarea id="hangul-output" rows="20" cols="40">
         </textarea>
     </section>
 
     <script charset="utf-8">
-    $("#convert-form").on("submit", function (event) {
+    $("#submit-btn").on("click", function (event) {
       event.preventDefault();
       $.ajax({
         url: '/convert',
