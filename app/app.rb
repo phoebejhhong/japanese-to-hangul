@@ -18,6 +18,7 @@ class KanaHangulApp
     result = ""
     current_substring = ""
     string.split("").each do |char|
+      # 장음 무시
       next if char == "ー"
       if mapper.is_base?(char)
         if current_substring.size == 0
@@ -33,6 +34,8 @@ class KanaHangulApp
         current_substring = ""
       end
     end
+
+    result += mapper.convert(current_substring)
 
     return result
   end
