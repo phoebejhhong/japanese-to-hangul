@@ -34,9 +34,9 @@ class KanaHangulMap
     ぱん ぴん ぷん ぺん ぽん".split(" ").delete_if {|el| el[/\s/]}
 
   HIRAGANA_YOON =
-    "きゃ しゃ ちゃ ひゃ　にゃ みゃ りゃ ぎゃ じゃ びゃ ぴゃ
-    きゅ しゅ ちゅ ひゅ　にゅ みゅ りゅ ぎゅ じゅ びゅ ぴゅ
-    きょ しょ ちょ ひょ　にょ みょ りょ ぎょ じょ びょ ぴょ"
+    "きゃ しゃ ちゃ ひゃ にゃ みゃ りゃ ぎゃ じゃ びゃ ぴゃ
+    きゅ しゅ ちゅ ひゅ にゅ みゅ りゅ ぎゅ じゅ びゅ ぴゅ
+    きょ しょ ちょ ひょ にょ みょ りょ ぎょ じょ びょ ぴょ"
     .split(" ").delete_if {|el| el[/\s/]}
 
   HIRAGANA_SOKUON =
@@ -57,15 +57,15 @@ class KanaHangulMap
     ぱっ ぴっ ぷっ ぺっ ぽっ".split(" ").delete_if {|el| el[/\s/]}
 
   HIRAGANA_YOON_N =
-    "きゃん しゃん ちゃん ひゃん　にゃん みゃん りゃん ぎゃん じゃん びゃん ぴゃん
-    きゅん しゅん ちゅん ひゅん　にゅん みゅん りゅん ぎゅん じゅん びゅん ぴゅん
-    きょん しょん ちょん ひょん　にょん みょん りょん ぎょん じょん びょん ぴょん"
+    "きゃん しゃん ちゃん ひゃん にゃん みゃん りゃん ぎゃん じゃん びゃん ぴゃん
+    きゅん しゅん ちゅん ひゅん にゅん みゅん りゅん ぎゅん じゅん びゅん ぴゅん
+    きょん しょん ちょん ひょん にょん みょん りょん ぎょん じょん びょん ぴょん"
     .split(" ").delete_if {|el| el[/\s/]}
 
   HIRAGANA_YOON_SOKUON =
     "きゃっ しゃっ ちゃっ ひゃっ にゃっ みゃっ りゃっ ぎゃっ じゃっ びゃっ ぴゃっ
-    きゅっ しゅっ ちゅっ ひゅっ　にゅっ みゅっ りゅっ ぎゅっ じゅっ びゅっ ぴゅっ
-    きょっ しょっ ちょっ ひょっ　にょっ みょっ りょっ ぎょっ じょっ びょっ ぴょっ"
+    きゅっ しゅっ ちゅっ ひゅっ にゅっ みゅっ りゅっ ぎゅっ じゅっ びゅっ ぴゅっ
+    きょっ しょっ ちょっ ひょっ にょっ みょっ りょっ ぎょっ じょっ びょっ ぴょっ"
     .split(" ").delete_if {|el| el[/\s/]}
 
   KATAKANA_BASE =
@@ -103,9 +103,9 @@ class KanaHangulMap
     パン ピン プン ペン ポン".split(" ").delete_if {|el| el[/\s/]}
 
   KATAKANA_YOON =
-    "キャ シャ チャ　ヒャ　ニャ ミャ リャ ギャ ジャ ビャ ピャ
-    キュ シュ チュ　ヒュ　ニュ ミュ リュ ギュ ジュ ビュ ピュ
-    キョ ショ チョ　ヒョ　ニョ ミョ リョ ギョ ジョ ビョ ピョ"
+    "キャ シャ チャ ヒャ ニャ ミャ リャ ギャ ジャ ビャ ピャ
+    キュ シュ チュ ヒュ ニュ ミュ リュ ギュ ジュ ビュ ピュ
+    キョ ショ チョ ヒョ ニョ ミョ リョ ギョ ジョ ビョ ピョ"
     .split(" ").delete_if {|el| el[/\s/]}
 
   KATAKANA_SOKUON =
@@ -127,14 +127,44 @@ class KanaHangulMap
 
   KATAKANA_YOON_N =
     "キャン シャン チャン ヒャン ニャン ミャン リャン ギャン ジャン ビャン ピャン
-    キュン シュン チュン ヒュン　ニュン ミュン リュン ギュン ジュン ビュン ピュン
-    キョン ション チョン ヒョン　ニョン ミョン リョン ギョン ジョン ビョン ピョン"
+    キュン シュン チュン ヒュン ニュン ミュン リュン ギュン ジュン ビュン ピュン
+    キョン ション チョン ヒョン ニョン ミョン リョン ギョン ジョン ビョン ピョン"
     .split(" ").delete_if {|el| el[/\s/]}
 
   KATAKANA_YOON_SOKUON =
-    "キャッ シャッ チャッ ヒャッ　ニャッ ミャッ リャッ ギャッ ジャッ ビャッ ピャッ
-    キュッ シュッ チュッ ヒュッ　ニュッ ミュッ リュッ ギュッ ジュッ ビュッ ピュッ
-    キョッ ショッ チョッ ヒョッ　ニョッ ミョッ リョッ ギョッ ジョッ ビョッ ピョッ"
+    "キャッ シャッ チャッ ヒャッ ニャッ ミャッ リャッ ギャッ ジャッ ビャッ ピャッ
+    キュッ シュッ チュッ ヒュッ ニュッ ミュッ リュッ ギュッ ジュッ ビュッ ピュッ
+    キョッ ショッ チョッ ヒョッ ニョッ ミョッ リョッ ギョッ ジョッ ビョッ ピョッ"
+    .split(" ").delete_if {|el| el[/\s/]}
+
+  # modern extended katakana combinations
+  # (some of them are not commonly used)
+  KATAKANA_TOKUSHUON =
+    "キェ
+    クァ クィ クェ クォ
+    グァ グィ グェ グォ
+    スァ スィ スゥ スェ スォ
+    ズィ
+    ティ トゥ テュ
+    チィ チェ
+    ヂィ ヂェ
+    ツァ ツィ ツェ ツォ
+    ジィ ジェ
+    ディ ドゥ
+    ニェ
+    ホゥ
+    ヒェ
+    ファ フィ フェ フォ
+    フャ フュ フィェ フョ
+    ビェ
+    ピェ
+    ミェ
+    イィ イェ
+    ユィ ユェ
+    リェ
+    ウィ ウゥ ウェ ウォ ウュ
+    ヴァ ヴィ ヴ ヴェ ヴォ
+    ヴャ ヴュ ヴィェ ヴョ"
     .split(" ").delete_if {|el| el[/\s/]}
 
   HANGUL_BASE =
@@ -203,6 +233,36 @@ class KanaHangulMap
     큣슛츗흇늇뮷륫귯쥿븃퓻
     쿗숏춋횻뇻묫룟굣죳뵷푯".split("").delete_if {|el| el[/\s/]}
 
+
+  HANGUL_TOKUSHUON =
+    "케
+    콰퀴퀘쿼
+    과귀궤궈
+    사시수쉐소
+    지
+    티투튜
+    치체
+    지제
+    차치체초
+    지제
+    디두
+    녜
+    후
+    혜
+    화휘훼훠
+    화휘훼효
+    볘
+    폐
+    몌
+    이예
+    유예
+    례
+    위우웨워우
+    바뷔부붸붜
+    뱌뷔붸뵤"
+    .split("").delete_if {|el| el[/\s/]}
+
+
   KANA_HANGUL_MAP = Hash.new
 
   def initialize
@@ -250,6 +310,10 @@ class KanaHangulMap
     end
     KATAKANA_YOON_SOKUON.each_with_index do |katakana, idx|
       KANA_HANGUL_MAP[katakana] = HANGUL_YOON_SOKUON[idx]
+    end
+
+    KATAKANA_TOKUSHUON.each_with_index do |katakana, idx|
+      KANA_HANGUL_MAP[katakana] = HANGUL_TOKUSHUON[idx]
     end
 
   end

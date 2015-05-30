@@ -18,6 +18,7 @@ class KanaHangulApp
     result = ""
     current_substring = ""
     string.split("").each do |char|
+      # ignore long vowels
       # 장음 무시
       next if char == "ー"
       if mapper.is_base?(char)
