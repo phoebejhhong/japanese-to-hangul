@@ -1,5 +1,8 @@
 require_relative './kana_hangul_map'
-require 'kakasi'
+require_relative './yahoo_api'
+require 'dotenv'
+
+Dotenv.load
 
 class KanaHangulApp
   attr_accessor :mapper
@@ -9,7 +12,7 @@ class KanaHangulApp
   end
 
   def convert_to_furigana(string)
-    Kakasi.kakasi("-JH", string)
+    YahooApi.convert(string)
   end
 
   def convert_kana_to_hangul(string)
