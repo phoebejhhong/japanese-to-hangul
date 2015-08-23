@@ -1,5 +1,6 @@
 require_relative './kana_hangul_map'
 require_relative './yahoo_api'
+require 'nokogiri'
 
 class KanaHangulApp
   attr_accessor :mapper
@@ -9,7 +10,12 @@ class KanaHangulApp
   end
 
   def convert_to_furigana(string)
-    YahooApi.convert(string)
+    xml = YahooApi.convert(string)
+    parse_XML(xml)
+  end
+
+  def parse_XML(xml)
+    Nokogiri::XML(xml).css("Furigana").children.to_s
   end
 
   def convert_kana_to_hangul(string)
