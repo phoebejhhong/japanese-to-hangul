@@ -1,7 +1,7 @@
 require 'net/http'
 
 class YahooApi
-  APP_KEY = ENV("APP_KEY")
+  APP_KEY = ENV['APP_KEY']
   BASE_URL = "http://jlp.yahooapis.jp/FuriganaService/V1/furigana"
 
   def self.convert(string)

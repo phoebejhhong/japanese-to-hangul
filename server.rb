@@ -1,4 +1,7 @@
 require 'sinatra'
+require 'dotenv'
+Dotenv.load
+
 require './app/app'
 
 get "/" do

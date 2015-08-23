@@ -1,8 +1,5 @@
 require_relative './kana_hangul_map'
 require_relative './yahoo_api'
-require 'dotenv'
-
-Dotenv.load
 
 class KanaHangulApp
   attr_accessor :mapper
