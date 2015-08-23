@@ -15,7 +15,17 @@ class KanaHangulApp
   end
 
   def parse_XML(xml)
-    Nokogiri::XML(xml).css("Furigana").children.to_s
+    words = Nokogiri::XML(xml).css("Word")
+    result = ""
+    words.each do |word|
+      if word.css("Furigana").empty?
+        result += word.css("Surface").children.first.content
+      else
+        result += word.css("Furigana").children.first.content
+      end
+    end
+
+    result
   end
 
   def convert_kana_to_hangul(string)
