@@ -1,6 +1,8 @@
 require 'sinatra'
-require 'dotenv'
-Dotenv.load
+if settings.development?
+  require 'dotenv'
+  Dotenv.load
+end
 
 require './app/app'
 
