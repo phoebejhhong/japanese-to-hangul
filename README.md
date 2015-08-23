@@ -4,11 +4,9 @@ https://japanese-to-hangul.herokuapp.com/
 
 ![alt text] [screen-shot]
 
-일본어 텍스트를 한글로 바꿔주는 웹 어플리케이션입니다.
-번역은 전혀 하지 않으며, 단지 일본어 발음 표기를 도와줍니다.
-[야후 재팬의 텍스트 분석 API][yahoo-api-link]를 사용하는 [시나트라][sinatra-link]앱입니다.
+일본어를 한글로는 일본어 텍스트를 한글로 바꿔주는 웹 어플리케이션입니다. 번역은 전혀 하지 않으며, 단지 일본어의 말소리를 한글로 표기합니다. [야후 재팬의 텍스트 분석 API][yahoo-api-link]를 사용하는 [시나트라][sinatra-link]앱입니다.
 
-This is a web app that converts Japanese text to Hangul, Korean alphabets. Not being a translator of any sort, it just helps you pronounce Japanese easily. It is a [Sinatra][sinatra-link] app and uses Yahoo Japan's [Languge Processing Api][yahoo-api-link].
+Japanese to Hangul is a web app that converts Japanese text to Hangul, Korean alphabets. Not being a translator of any sort, it just transcribes Japanese words into Hangul. It is a [Sinatra][sinatra-link] app and uses Yahoo Japan's [Languge Processing Api][yahoo-api-link].
 
 ## 설치와 사용 Installation and Usage
 
