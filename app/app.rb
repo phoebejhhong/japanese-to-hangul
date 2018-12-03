@@ -3,12 +3,6 @@ require_relative './yahoo_api'
 require 'nokogiri'
 
 class KanaHangulApp
-  attr_accessor :mapper
-
-  def initialize
-    self.mapper = KanaHangulMap.new
-  end
-
   def convert_to_furigana(string)
     xml = YahooApi.convert(string)
     parse_XML(xml)
@@ -28,6 +22,14 @@ class KanaHangulApp
     result
   end
 
+  def is_base?(char)
+    HIRAGANA_BASE.include?(char) || KATAKANA_BASE.include?(char)
+  end
+
+  def convert_char(char)
+    KANA_HANGUL_MAP[char] || char
+  end
+
   def convert_kana_to_hangul(string)
     string = convert_to_furigana(string)
 
@@ -37,24 +39,23 @@ class KanaHangulApp
       # ignore long vowels
       # 장음 무시
       next if char == "ー"
-      if mapper.is_base?(char)
+      if is_base?(char)
         if current_substring.size == 0
           current_substring += char
         else
-          result += mapper.convert(current_substring)
+          result += convert_char(current_substring)
           current_substring = char
         end
       elsif char =~ /\p{Hiragana}|\p{Katakana}/
         current_substring += char
       else
-        result += mapper.convert(current_substring) + char
+        result += convert_char(current_substring) + char
         current_substring = ""
       end
     end
 
-    result += mapper.convert(current_substring)
+    result += convert_char(current_substring)
 
     return result
   end
-
 end
