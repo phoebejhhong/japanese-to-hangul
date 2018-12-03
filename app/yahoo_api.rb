@@ -1,7 +1,6 @@
 require 'net/http'
 
 class YahooApi
-
   def self.convert(string)
     uri = build_uri(string)
     Net::HTTP.get_response(uri).body
